@@ -21,13 +21,13 @@ const gravacoes = database.sequelizeConfig.define(
 //criando a chave estrangeira
 // Estamos dizendo que um artista pode ter muitas gravacoes
 artistas.hasMany(gravacoes,{
-    foreignKey: 'artistaId',// Chave estrangeira na tabela de alunos
+    foreignKey: 'artistaId',
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE'
 });
 
 gravacoes.belongsTo(artistas,{
-    foreignKey: 'artistaId',// Chave estrangeira na tabela de alunos
+    foreignKey: 'artistaId',
 })
 
 //// Sincronizando a tabela gravacoes com o banco de dados
